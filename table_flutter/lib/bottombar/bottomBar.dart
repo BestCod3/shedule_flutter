@@ -13,11 +13,23 @@ class BottomBar extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-              IconButton(onPressed: (){}, icon: Icon(Icons.alarm),),      
-              IconButton(onPressed: (){}, icon: Icon(Icons.calendar_month),),
-           // FloatingActionButton(onPressed: (){}, child: Icon(Icons.search), backgroundColor: Colors.amber,),
-              IconButton(onPressed: (){}, icon: Icon(Icons.account_box),),      
-              IconButton(onPressed: (){}, icon: Icon(Icons.notifications_none),),      
+          IconButton(
+            onPressed: () {},
+            icon: Icon(Icons.alarm),
+          ),
+          IconButton(
+            onPressed: () {},
+            icon: Icon(Icons.calendar_month),
+          ),
+          // FloatingActionButton(onPressed: (){}, child: Icon(Icons.search), backgroundColor: Colors.amber,),
+          IconButton(
+            onPressed: () {},
+            icon: Icon(Icons.account_box),
+          ),
+          IconButton(
+            onPressed: () {},
+            icon: Icon(Icons.notifications_none),
+          ),
         ],
       ),
     );

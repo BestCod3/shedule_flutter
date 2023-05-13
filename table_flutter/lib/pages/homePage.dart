@@ -4,6 +4,7 @@ import 'package:table_flutter/bottombar/bottomBar.dart';
 import 'package:table_flutter/pages/groups.dart';
 import 'package:table_flutter/pages/teachers.dart';
 
+import '../CustomAppBar/Drawer.dart';
 import '../widgets/CustomContainer.dart';
 
 class HomePage extends StatefulWidget {
@@ -18,35 +19,43 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-      backgroundColor: Color.fromRGBO(0, 0, 0, 0.2),
-        drawer: Drawer( elevation: 5,
-        child: Container(
-      width: 200,
-      height: 100,
-      decoration: BoxDecoration(
-        image: new DecorationImage(
-          image: AssetImage('assets/images/drawImage.jpg'),
-          fit: BoxFit.cover,
-        ),
-      ),),),
+        backgroundColor: Color.fromRGBO(0, 0, 0, 0.2),
+        drawer: DrawerSplashMenu(),
         appBar: CustomAppBar(height: 200),
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              CustomContainer(text: "teachers", onTap: (){setState(() {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => Teachers(),),);
-              });} ,),
+              CustomContainer(
+                text: "teachers",
+                onTap: () {
+                  setState(() {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Teachers(),
+                      ),
+                    );
+                  });
+                },
+              ),
               SizedBox(height: 90),
-              CustomContainer(text: "Groups", onTap: (){setState(() {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => Groups(),),);
-              });}),
-             
+              CustomContainer(
+                  text: "Groups",
+                  onTap: () {
+                    setState(() {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => Groups(),
+                        ),
+                      );
+                    });
+                  }),
             ],
           ),
-          
         ),
-         bottomNavigationBar: BottomBar(),
+        bottomNavigationBar: BottomBar(),
       ),
     );
   }

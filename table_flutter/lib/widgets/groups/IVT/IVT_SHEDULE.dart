@@ -6,23 +6,21 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
 import 'package:table_flutter/CustomAppBar/CustomAppBar.dart';
-
-import '../CustomAppBar/Drawer.dart';
+import 'package:table_flutter/bottombar/IVTBottomBar.dart';
+import 'package:table_flutter/bottombar/bottomBar.dart';
 
 // замените на свой URL
 
-class Temirov extends StatefulWidget {
-  Temirov({
+class IvtShedule extends StatefulWidget {
+  IvtShedule({
     Key? key,
-    /*required this.pushText*/
   });
-  //String pushText;
 
   @override
-  State<Temirov> createState() => _TemirovState();
+  State<IvtShedule> createState() => _IvtSheduleState();
 }
 
-class _TemirovState extends State<Temirov> {
+class _IvtSheduleState extends State<IvtShedule> {
   // Map<String, dynamic> _data ={};
   String _subject = '';
   String _group = '';
@@ -65,13 +63,6 @@ class _TemirovState extends State<Temirov> {
       log('$e');
       throw Exception(e);
     }
-    // if (response.statusCode == 200) {
-    //   setState(() {
-    //     _data = response.body;
-    //   });
-    // } else {
-    //   print('Ошибка получения данных: ${response.statusCode}');
-    // }
   }
 
   @override
@@ -79,7 +70,7 @@ class _TemirovState extends State<Temirov> {
     return SafeArea(
       child: Scaffold(
         backgroundColor: Color.fromRGBO(0, 0, 0, 0.2),
-        drawer: DrawerSplashMenu(),
+        drawer: Drawer(),
         appBar: CustomAppBar(height: 200),
         body: Center(
           child: Container(
@@ -141,6 +132,7 @@ class _TemirovState extends State<Temirov> {
                 ],
               )),
         ),
+        bottomNavigationBar: IVTBottomBar(),
       ),
     );
   }
