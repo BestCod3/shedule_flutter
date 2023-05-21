@@ -19,40 +19,49 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Color.fromRGBO(0, 0, 0, 0.2),
+        extendBodyBehindAppBar: true,
+        // backgroundColor: Color.fromRGBO(0, 0, 0, 0.2),
         drawer: DrawerSplashMenu(),
-        appBar: CustomAppBar(height: 200),
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              CustomContainer(
-                text: "teachers",
-                onTap: () {
-                  setState(() {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => Teachers(),
-                      ),
-                    );
-                  });
-                },
-              ),
-              SizedBox(height: 90),
-              CustomContainer(
-                  text: "Groups",
+        appBar: CustomAppBar(height: 150),
+        body: Container(
+          width: double.infinity,
+          decoration: BoxDecoration(
+            image: DecorationImage(
+                image: AssetImage('assets/images/drawImage.jpg'),
+                fit: BoxFit.cover),
+          ),
+          child: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                CustomContainer(
+                  text: "Teachers",
                   onTap: () {
                     setState(() {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => Groups(),
+                          builder: (context) => Teachers(),
                         ),
                       );
                     });
-                  }),
-            ],
+                  },
+                ),
+                SizedBox(height: 90),
+                CustomContainer(
+                    text: "Groups",
+                    onTap: () {
+                      setState(() {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => Groups(),
+                          ),
+                        );
+                      });
+                    }),
+              ],
+            ),
           ),
         ),
         bottomNavigationBar: BottomBar(),

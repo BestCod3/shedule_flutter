@@ -1,23 +1,26 @@
+import 'package:flutter/material.dart';
 import 'dart:convert';
 import 'dart:developer';
 
-import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
-class LessonTuesday1 extends StatefulWidget {
-  LessonTuesday1({Key? key});
+class LessonWednesday1 extends StatefulWidget {
+  const LessonWednesday1({
+    Key? key,
+  });
 
   @override
-  _LessonTuesday1State createState() => _LessonTuesday1State();
+  _LessonMonday1State createState() => _LessonMonday1State();
 }
 
-class _LessonTuesday1State extends State<LessonTuesday1> {
+class _LessonMonday1State extends State<LessonWednesday1> {
   String _subject = '';
   String _group = '';
   String _subjecttype = '';
   String _days = '';
   String _time = '';
   String _room = '';
+
   void initState() {
     showWeatherByLocation();
     super.initState();
@@ -30,7 +33,7 @@ class _LessonTuesday1State extends State<LessonTuesday1> {
   Future<void> getData() async {
     try {
       final client = http.Client();
-      final url = 'http://172.20.10.14:8000/api/rasp/detail/5/';
+      final url = 'http://172.20.10.14:8000/api/rasp/detail/9/';
       Uri uri = Uri.parse(url);
       final result = await client.get(uri);
       utf8.decode(result.bodyBytes);
@@ -42,6 +45,7 @@ class _LessonTuesday1State extends State<LessonTuesday1> {
       _days = jsonResult['days'];
       _time = jsonResult['time'];
       _room = jsonResult['room'];
+
       log('response ===> ${jsonResult}');
       setState(() {});
 

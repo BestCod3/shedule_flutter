@@ -4,14 +4,14 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
-class LessonTuesday1 extends StatefulWidget {
-  LessonTuesday1({Key? key});
+class LessonFriday2 extends StatefulWidget {
+  LessonFriday2({Key? key});
 
   @override
-  _LessonTuesday1State createState() => _LessonTuesday1State();
+  _LessonFriday2State createState() => _LessonFriday2State();
 }
 
-class _LessonTuesday1State extends State<LessonTuesday1> {
+class _LessonFriday2State extends State<LessonFriday2> {
   String _subject = '';
   String _group = '';
   String _subjecttype = '';
@@ -30,7 +30,7 @@ class _LessonTuesday1State extends State<LessonTuesday1> {
   Future<void> getData() async {
     try {
       final client = http.Client();
-      final url = 'http://172.20.10.14:8000/api/rasp/detail/5/';
+      final url = 'http://172.20.10.14:8000/api/rasp/detail/18/';
       Uri uri = Uri.parse(url);
       final result = await client.get(uri);
       utf8.decode(result.bodyBytes);

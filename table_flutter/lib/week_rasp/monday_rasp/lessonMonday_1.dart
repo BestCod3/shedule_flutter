@@ -60,10 +60,15 @@ class _LessonMonday1State extends State<LessonMonday1> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: MediaQuery.of(context).size.width * 0.9,
+      width: MediaQuery.of(context).size.width * 0.99,
       height: MediaQuery.of(context).size.height * 0.1,
       decoration: BoxDecoration(
-          color: Color(0xffFFFFFF), borderRadius: BorderRadius.circular(10)),
+          gradient: LinearGradient(
+              colors: [Colors.grey, Colors.white],
+              begin: Alignment.centerLeft,
+              end: Alignment.centerRight),
+          color: Color(0xffFFFFFF),
+          borderRadius: BorderRadius.circular(10)),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [

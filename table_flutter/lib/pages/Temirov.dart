@@ -83,7 +83,7 @@ class _TemirovState extends State<Temirov> {
         appBar: CustomAppBar(height: 200),
         body: Center(
           child: Container(
-              width: MediaQuery.of(context).size.width * 0.9,
+              width: MediaQuery.of(context).size.width * 0.99,
               height: MediaQuery.of(context).size.height * 0.1,
               decoration: BoxDecoration(
                   color: Color(0xffFFFFFF),

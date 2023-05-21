@@ -10,15 +10,22 @@ class CustomContainer extends StatelessWidget {
       onTap: onTap,
       child: Container(
         height: MediaQuery.of(context).size.height * 0.08,
-        width: MediaQuery.of(context).size.width * 0.8,
+        width: MediaQuery.of(context).size.width * 0.9,
         decoration: BoxDecoration(
+          gradient: LinearGradient(
+              colors: [Colors.grey, Colors.white],
+              begin: Alignment.centerLeft,
+              end: Alignment.centerRight),
           color: Color(0xffFFFFFF),
           borderRadius: BorderRadius.circular(10),
         ),
         child: Center(
           child: Text(
             text.toUpperCase(),
-            style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+            style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.w500,
+            ),
           ),
         ),
       ),

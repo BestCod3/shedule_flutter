@@ -3,19 +3,19 @@ import 'package:table_flutter/CustomAppBar/CustomAppBar.dart';
 import 'package:table_flutter/CustomAppBar/Drawer.dart';
 import 'package:table_flutter/bottombar/IVTBottomBar.dart';
 
-import 'package:table_flutter/week_rasp/tuesday_rasp/lessonTuesday_1.dart';
-import 'package:table_flutter/week_rasp/tuesday_rasp/lessonTuesday_2.dart';
-import 'package:table_flutter/week_rasp/tuesday_rasp/lessonTuesday_3.dart';
-import 'package:table_flutter/week_rasp/tuesday_rasp/lessonTuesday_4.dart';
+import 'lessonThursday_1.dart';
+import 'lessonThursday_2.dart';
+import 'lessonThursday_3.dart';
+import 'lessonThursday_4.dart';
 
-class IVTTuesday extends StatefulWidget {
-  const IVTTuesday({Key? key}) : super(key: key);
+class IVTThursday extends StatefulWidget {
+  const IVTThursday({Key? key}) : super(key: key);
 
   @override
   _IVTTuesdayState createState() => _IVTTuesdayState();
 }
 
-class _IVTTuesdayState extends State<IVTTuesday> {
+class _IVTTuesdayState extends State<IVTThursday> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -27,10 +27,10 @@ class _IVTTuesdayState extends State<IVTTuesday> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              LessonTuesday1(),
-              LessonTuesday2(),
-              LessonTuesday3(),
-              LessonTuesday4(),
+              LessonThursday1(),
+              LessonThursday2(),
+              LessonThursday3(),
+              LessonThursday4(),
             ],
           ),
         ),
