@@ -20,7 +20,7 @@ class _IVTTuesdayState extends State<IVTThursday> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Color.fromRGBO(0, 0, 0, 0.2),
+        backgroundColor: Color(0xff2D2F2E),
         drawer: DrawerSplashMenu(),
         appBar: CustomAppBar(height: 200),
         body: Center(

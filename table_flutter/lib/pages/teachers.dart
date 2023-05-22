@@ -5,6 +5,9 @@ import 'package:table_flutter/CustomAppBar/Drawer.dart';
 import 'package:table_flutter/bottombar/bottomBar.dart';
 
 import 'package:table_flutter/week_rasp/friday_rasp/IvtFriday.dart';
+import 'package:table_flutter/week_rasp/thursday_rasp/IVT_thursday.dart';
+import 'package:table_flutter/week_rasp/tuesday_rasp/IVT_Tuesday.dart';
+import 'package:table_flutter/week_rasp/wednesday_rasp/Ivt_wednesday.dart';
 import 'package:table_flutter/widgets/CustomContainer.dart';
 
 class Teachers extends StatefulWidget {
@@ -25,7 +28,12 @@ class _TeachersState extends State<Teachers> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              CustomContainer(text: "Ногоев Г.Д.", onTap: () {}),
+              CustomContainer(
+                  text: "Ногоев Г.Д.",
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => IVTTuesday()));
+                  }),
               SizedBox(
                 height: 30,
               ),
@@ -38,11 +46,23 @@ class _TeachersState extends State<Teachers> {
               SizedBox(
                 height: 30,
               ),
-              CustomContainer(text: "Шекеев К.", onTap: () {}),
+              CustomContainer(
+                  text: "Шекеев К.",
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => IvtWednesday()));
+                  }),
               SizedBox(
                 height: 30,
               ),
-              CustomContainer(text: "Жекшенова А.", onTap: () {}),
+              CustomContainer(
+                  text: "Жекшенова А.",
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => IVTThursday()));
+                  }),
             ],
           ),
         ),
